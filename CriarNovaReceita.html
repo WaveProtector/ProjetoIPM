@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta charset="UTF-8">
+<head>
+<script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
+<title>Interface de frigorífico inteligente</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <h2>
+            <th><button onclick="document.location='ReceitasMenu.html'"><i class="fa-solid fa-arrow-turn-down-left"></i></button></th>
+            <th><button onclick="document.location='PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
+            <th>Criar nova receita</th>
+            </h2>
+        </tr>
+    </table>
+    <br>
+<section>
+    <form>
+    <label for="nomeReceita">Nome da receita:</label>
+    <input type="text" id="nomeReceita" name="nomeReceita" value="Insira o nome da receita"><br><br>
+
+    <table>
+        Escolha o tipo de receita: <br>
+        <input type="checkbox" id="pequenoalmoco" name="pequenoalmoco" value="pequenoalmoco">
+        <label for="pequenoalmoco">Pequeno-almoço</label>
+        <input type="checkbox" id="almoco" name="almoco" value="almoco">
+        <label for="almoco">Almoço</label>
+        <input type="checkbox" id="jantar" name="jantar" value="jantar">
+        <label for="jantar">Jantar</label>
+        <input type="checkbox" id="sobremesa" name="sobremesa" value="sobremesa">
+        <label for="sobremesa">Sobremesa</label>
+    </table>
+    <br>
+    <table>
+        Escolha a categoria da receita: <br>
+        <input type="checkbox" id="carne" name="carne" value="carne">
+        <label for="carne">Carne</label>
+        <input type="checkbox" id="dietaMediterranica" name="dietaMediterranica" value="dietaMediterranica">
+        <label for="dietaMediterranica">Dieta Mediterrânica</label>
+        <input type="checkbox" id="semGluten" name="semGluten" value="semGluten">
+        <label for="semGluten">Sem Glutén</label>
+        <input type="checkbox" id="semLactose" name="semLactose" value="semLactose">
+        <label for="semLactose">Sem Lactose</label>
+        <input type="checkbox" id="vegetariana" name="vegetariana" value="vegetariana">
+        <label for="vegetariana">Vegetariana</label>
+    </table>
+    <br>
+    <input type="submit" value="Criar Receita">
+    </form>
+</section>
+</body>
+</html>

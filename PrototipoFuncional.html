@@ -3,12 +3,13 @@
 <meta charset="UTF-8">
 <head>
 <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
+<script src = "functions.js"></script>
 <title>Interface de frigorífico inteligente</title>
 </head>
-<body>
+<body onload="getTime()">
 
-<h1>10:00  Sexta-feira</h1>
-<h2>        1 de abril</h2>
+<h1 id="time&weekday"> Horas Dia da Semana</h1>
+<h2 id="date">        1 de abril</h2>
 <h2> Lisboa 16o</h2>
 
 <section>
@@ -40,10 +41,10 @@
 
 <article> 
     <h2>Nível de água</h2>
-    <p>ALTO</p>
+    <p id ="nivel">ALTO</p>
+    <button id="retirar" onclick="changeWaterLevel()" type="button">Retirar Água</button>
 </article>
 
 </section>
-
 </body>
 </html>

@@ -1,0 +1,31 @@
+#container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-areas:
+        'header header'
+        'section main'
+        'section nav';
+}
+
+header {
+    background-color: lightblue;
+    grid-area: header;
+    text-align: center;
+}
+
+section {
+    background-color: lightgreen;
+    grid-area: section;
+    
+}
+
+main {
+    background-color: cadetblue;
+    grid-area: main;
+}
+
+nav {
+    background-color: green;
+    grid-area: nav;
+}

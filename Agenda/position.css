@@ -1,0 +1,129 @@
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+#container {
+    display: grid;
+    grid-template-columns: 94% auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        'header header'
+        'main section';
+}
+
+header {
+    grid-area: header;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    font-size: 45px;
+    width: 100%;
+    height: 68px;
+    background-color: #1C2760;
+}
+
+header button {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+    background-color:#4A68FF;
+    color: white;
+}
+
+header span {
+    padding-left: 34%;
+}
+
+main {
+    grid-area: main;
+}
+
+section {
+    grid-area: section;
+}
+
+/* Month header */
+.month {
+  padding: 70px 25px;
+  width: 50%;
+  background: #4AC2FF;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  width: 50%;
+  padding: 10px 0;
+  background-color:#2E419F;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: white;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  width: 50%;
+  padding: 10px 0;
+  background: #ddd;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  height: 70px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: black;
+  border: 1px solid black;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding-left: 42.5%;
+  padding-right: 42.5%;
+  padding-bottom: 56.5%;
+  background: #4A68FF;
+  color: white
+}
+
+.notes-title {
+    /*mesmo tentando editar aqui as "notas" não vão para a esquerda, já tentem mexer no calendar e não é nada de lá
+    também tentem mexer no header e nada, só se for da grid*/
+}
+
+.notes {
+    list-style-type: disc;
+}

@@ -3,38 +3,50 @@
 <meta charset="UTF-8">
 <head>
 <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
-<title>Menu de receitas</title>
+<link rel="stylesheet" href="position.css">
+<title>Receitas</title>
 </head>
 <body>
 
-<h1>Receitas</h1>
 
-<h2>
-    <table>
-        <tr>
-            <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-arrow-turn-down-left"></i></button></th>
-            <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
-            <th>Carne</th>
-            <th>Dieta Mediterrânica</th>
-            <th>Sem glutén</th>
-            <th>Sem lactose</th>
-            <th>Vegetariana</th>
-            <th><i class="fa-solid fa-magnifying-glass"></i>Pesquisar receitas</th>
-        </tr>
-    </table>
-</h2>
+<div id="container">
+    <div class="header">
+        <h1>Receitas</h1>
+    </div>
 
-<section>
-    <h2>Escolhidas anteriormente</h2>
-    <ul>
-        <li><a href="#">Esparguete à bolonhesa</a></li>
-        <li><a href="../TortelliniComPresuntoEMozarella/TortelliniComPresuntoEMozarella.html">Tortellini com presunto e mozzarella</a></li>
-        <li><a href="#">Risotto de cogumelos</a></li>
-    </ul>
+    <div class="tiny-header">
+        <h2>
+            <table>
+                <tr>
+                <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-arrow-turn-down-left"></i></button></th>
+                <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
+                <th>Carne</th>
+                <th>Dieta Mediterrânica</th>
+                <th>Sem glutén</th>
+                <th>Sem lactose</th>
+                <th>Vegetariana</th>
+                <th class="search-bar"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Pesquisar receitas" /></th>
+                </tr>
+            </table>
+        </h2>
+    </div>
 
-    <aside>
-        <button onclick="document.location='CriarNovaReceita.html'"><i class="fa-solid fa-plus-large"></i>Criar nova receita</button>
-    </aside>
-</section>
+    <div></div>
+
+    <div class="left">
+        <h2>Escolhidas anteriormente</h2>
+            <ul>
+                <li><a href="#">Esparguete à bolonhesa</a></li>
+                <li><a href="../TortelliniComPresuntoEMozarella/TortelliniComPresuntoEMozarella.html">Tortellini com presunto e mozzarella</a></li>
+                <li><a href="#">Risotto de cogumelos</a></li>
+            </ul>
+    </div>
+
+    <div class="right">
+        <p>wip</p>
+    </div>
+
+</div>
+
 </body>
 </html>

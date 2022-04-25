@@ -1,9 +1,4 @@
 var count = 1;
-// Calculate milliseconds in a year
-const minute = 1000 * 60;
-const hour = minute * 60;
-const day = hour * 24;
-const year = day * 365;
 const mes = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
 function changeWaterLevel() {
@@ -26,10 +21,11 @@ function changeWaterLevel() {
         count = 0;
 }
 
+
 function addZero(i) {
     if (i < 10) {i = "0" + i}
     return i;
-  }
+}
  
 function getTime() {
   const d = new Date();
@@ -63,4 +59,3 @@ function getTime() {
   document.getElementById("time&weekday").innerHTML = time;
   document.getElementById("date").innerHTML = date;
 }
-

@@ -72,8 +72,4 @@ function next() {
 
 function changeMonthAndYear() {
     document.getElementsByClassName("active-month")[0].innerHTML =  mes[currentmonth] + " " + currentyear;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e7a2578250adcded014c60ba4d7347665c363056

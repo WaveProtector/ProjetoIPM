@@ -1,0 +1,75 @@
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 500px;
+    grid-template-areas: 
+        'header'
+        'main';
+}
+
+header {
+    grid-area: header;
+    position: relative;
+}
+
+#lastpage {
+    position: absolute;
+    padding: 15px;
+    left:  200px;
+    top: 60px;
+}
+
+#house {
+    position: absolute;
+    padding: 15px;
+    left: 100px;
+    top: 60px;
+}
+
+#titulo {
+    position: absolute;
+    left: 500px;
+    top: 60px;
+}
+
+main {
+    grid-area: main;
+    position: relative;
+}
+
+#cart {
+    position: absolute;
+    left: 650px;
+    top: 25px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+main h1 {
+    position: absolute;
+    left: 585px;
+    top: 75px;
+}
+
+#agendarEncomenda {
+    position: absolute;
+    left: 520px;
+    top: 230px;
+    font-size: 25px;
+}
+
+#dataEncomenda {
+    position: absolute;
+    top: 225px;
+    left: 760px;
+    padding: 5px;
+}
+
+#encomendar {
+    position: absolute;
+    top: 320px;
+    left: 625px;
+    padding: 10px;
+}

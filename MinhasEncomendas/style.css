@@ -1,0 +1,43 @@
+header {
+    background-color: #1C2760;
+}
+
+#lastpage {
+    background-color: #ccf2ff
+}
+
+#house {
+    background-color: #ccf2ff;
+}
+
+#titulo {
+    color: white;
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    background-color: #4AC2FF;
+}
+
+#cart {
+    background-color: #ccf2ff;
+}
+
+main h1 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#agendarEncomenda {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#dataEncomenda {
+    background-color: #ccf2ff;
+}
+
+#encomendar {
+    background-color: #ccf2ff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}

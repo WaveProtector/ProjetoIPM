@@ -3,20 +3,25 @@
 <meta charset="UTF-8">
 <head>
 <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="position.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 <title>Menu de Encomendas</title>
 </head>
 <body>
+    <div id="container">
+        <header>
+            <a id="titulo" >Menu de Encomendas</a>
+            <button id="lastpage" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'">Last Page<i class="fa-solid fa-arrow-turn-down-left"></i></button>
+            <button id="house" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button>
+        </header>
 
-    <h2>
-        <table>
-            <tr>
-                <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-arrow-turn-down-left"></i></button></th>
-                <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
-                <th><button onclick="document.location='../MinhasEncomendas/MinhasEncomendas.html'"><i class="fa-solid fa-cart-shopping"></i></button></th>
-                <th><i class="fa-solid fa-magnifying-glass"></i>Pesquisar produtos</th>
-            </tr>
-        </table>
-    </h2>
+        <main>
+            <button id="cart" onclick="document.location='../MinhasEncomendas/MinhasEncomendas.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+            <input id="search" type="text" placeholder="Pesquisar produtos...">
+            <h1>Meu carrinho</h1>
+        </main>
+    </div>
 
 </body>
 </html>

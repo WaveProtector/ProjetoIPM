@@ -1,0 +1,63 @@
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 500px;
+    grid-template-areas: 
+        'header'
+        'main';
+}
+
+header {
+    grid-area: header;
+    position: relative;
+}
+
+#lastpage {
+    position: absolute;
+    padding: 15px;
+    left:  200px;
+    top: 60px;
+}
+
+#house {
+    position: absolute;
+    padding: 15px;
+    left: 100px;
+    top: 60px;
+}
+
+#titulo {
+    position: absolute;
+    left: 500px;
+    top: 60px;
+}
+
+main {
+    grid-area: main;
+    position: relative;
+}
+
+#search {
+    position: absolute;
+    left: 600px;
+    top: 300px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#cart {
+    position: absolute;
+    left: 650px;
+    top: 75px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+main h1 {
+    position: absolute;
+    left: 585px;
+    top: 125px;
+}

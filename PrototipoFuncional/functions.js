@@ -54,8 +54,9 @@ function getTime() {
         case 6:
             wd = "Sábado";
   }
-  let time = h + ":" + m + "    " + wd;
+  let time = h + ":" + m;
   let date = d.getDate() + " de " + mes[d.getMonth()]; 
-  document.getElementById("time&weekday").innerHTML = time;
+  document.getElementById("time").innerHTML = time;
   document.getElementById("date").innerHTML = date;
+  document.getElementById("weekday").innerHTML = wd;
 }

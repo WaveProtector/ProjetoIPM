@@ -8,24 +8,143 @@
         'section nav';
 }
 
+/*
+Header and position of its elements
+*/
 header {
-    background-color: lightblue;
     grid-area: header;
+    position: relative;
+}
+
+#time {
+    position: absolute;
+    left: 175px;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+#weekday {    
+    position: absolute;
+    left: 225px;
+    top: 160px;
+}
+
+#date {
+    position: absolute;
+    left: 225px;
+    top: 190px;
+}
+
+#temperature {
+    position: absolute;
+    bottom: 30px;
+    right: 235px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#icon {
+    position: absolute;
+    right: 250px;
+    top: 20px;
+}
+
+/* 
+Section and position of its elements
+*/
+section {
+    grid-area: section;
+    position: relative;
+}
+
+section table {
+    position: absolute;
+    left: 70px;
+    top: 50px;
+    padding-bottom: 180px;
+}
+
+section table th {
+    padding: 20px;
+}
+
+section table td {
+    padding: 15px;
+}
+
+/*
+Main and position of its elements 
+*/
+main {
+    grid-area: main;
+    position: relative;
+}
+
+#myBtn {
+    position: absolute;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    right: 50px;
+    bottom: 75px;
+}
+
+main h2 {
+    position: absolute;
+    left: 110px;
+    top: 30px;
+    padding-bottom: 120px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+#nivel {
+    position: absolute;
+    left: 193px;
+    top: 115px;
+    padding: 5px;
+
+}
+
+#retirar {
+    position: absolute;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    right: 50px;
+    top: 75px;
+}
+
+/* 
+Nav and position of its elements
+*/
+
+nav {
+    grid-area: nav;
+    position: relative;
     text-align: center;
 }
 
-section {
-    background-color: lightgreen;
-    grid-area: section;
-    
+#encomendas {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 65px;
 }
 
-main {
-    background-color: cadetblue;
-    grid-area: main;
-}
-
-nav {
-    background-color: green;
-    grid-area: nav;
+#agenda {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

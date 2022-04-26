@@ -5,19 +5,28 @@
     <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
     <script src = "functions.js"></script>
     <link rel="stylesheet" href="position.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Roboto+Mono:wght@300&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Saira+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Rajdhani:wght@600&family=Saira+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
     <title>Interface de frigorífico inteligente</title>
 </head>
 
 <body onload="getTime()">
     <div id="container">
         <header>
-            <h1 id="time&weekday"> Horas Dia da Semana</h1>
-            <h2 id="date">        1 de abril</h2>
-            <h2 id="temperature"> Lisboa 16o</h2>
+            <h1 id="time"></h1>
+            <h2 id="weekday"></h2>
+            <h2 id="date"></h2>
+            <img id="icon" src="tempoicon.png">
+            <h2 id="temperature"> Lisboa <br> 16º</h2>
         </header>
-
+        
         <main> 
-            <a href="../ReceitasMenu/ReceitasMenu.html"><button>Receitas</button></a>
+            <a href="../ReceitasMenu/ReceitasMenu.html"><button id="myBtn">Receitas</button></a>
             <h2>Nível de água</h2>
             <p id ="nivel">ALTO</p>
             <br>
@@ -25,10 +34,9 @@
         </main>
     
         <nav>
-            <ul>
-                <li><a href="../EncomendasMenu/EncomendasMenu.html"><button>Encomendas</button></a></li>
-                <li><a href="../Agenda/Agenda.html"><button>Agenda</button></a></li>
-            </ul>    
+            <a href="../EncomendasMenu/EncomendasMenu.html"><button id="encomendas">Encomendas</button></a>
+            <br>
+            <a href="../Agenda/Agenda.html"><button id="agenda">Agenda</button></a>
         </nav>
     
         <section>

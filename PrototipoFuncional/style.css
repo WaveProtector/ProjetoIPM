@@ -1,0 +1,126 @@
+/*
+Header and style of its elements
+*/
+header {
+    background-color: #1C2760;
+    border-style: groove;
+    border-color: black;
+}
+
+#time {
+    color: black;
+    background-color: #ccf2ff;
+    line-height: 110px;
+    border-style: groove;
+    border-color: black;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 125px;
+}
+
+#weekday {    
+    color: black;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#date {
+    color: black;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#temperature {
+    color: black;
+    background-color: #ccf2ff;
+    border-style: groove;
+    border-color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/*
+Section and style of its elements
+*/
+section {
+    background-color: #4AC2FF;
+    border-style: groove;
+    border-color: black;
+    border-top: none;
+}
+
+section table {
+    background-color: #ccf2ff;
+    font-size: 20px;
+    line-height: 30px;
+    border-style: groove;
+    border-color: #000033;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+section table th {
+    font-size: xx-large;
+    font-family: 'Sora', sans-serif;
+}
+
+/*
+Main and style of its elements 
+*/
+main {
+    background-color: #4AC2FF;
+    border-style: groove;
+    border-color: #000033;
+    border-top: none;
+    border-left: none;
+}
+
+#myBtn {
+    font-size: 20px;
+    background-color: #99e6ff;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+main h2 {
+    font-size: 30px;
+    font-family: 'Sora', sans-serif;
+    background-color: #ccf2ff;
+    border-style: groove;
+    border-color: #000033;
+}
+
+#nivel {
+    font-size: 40px;
+    background-color: whitesmoke;
+    border-style: ridge;
+    border-color: black;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+#retirar {
+    font-size: 20px;
+    background-color: #99e6ff;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+/* 
+Nav and style of its elements
+*/
+
+nav {
+    background-color: #1C2760;
+}
+
+#encomendas {
+    background-color: #99e6ff;
+    border-style: ridge;
+    border-color: black;
+    font-size: 20px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+#agenda {
+    background-color: #99e6ff;
+    border-style: ridge;
+    border-color: black;
+    font-size: 20px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+

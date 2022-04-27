@@ -1,7 +1,7 @@
 #container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 200px 500px;
+    grid-template-rows: 30% 500px;
     grid-template-areas: 
         'header'
         'main';
@@ -15,15 +15,22 @@ header {
 #lastpage {
     position: absolute;
     padding: 15px;
-    left:  200px;
-    top: 60px;
+    left: 100px;
+    top: 40px;
 }
 
 #house {
     position: absolute;
     padding: 15px;
-    left: 100px;
-    top: 60px;
+    left: 200px;
+    top: 40px;
+}
+
+#title {
+    position: absolute;
+    padding: 15px;
+    left: 650px;
+    top: 20px;
 }
 
 #titulo {
@@ -35,16 +42,6 @@ header {
 main {
     grid-area: main;
     position: relative;
-}
-
-#cart {
-    position: absolute;
-    left: 650px;
-    top: 25px;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 main h1 {

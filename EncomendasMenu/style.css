@@ -11,14 +11,27 @@ body {
     font-size: 30px;
 }
 
+#lastpage:hover {
+    background-color: #678690;
+}
+
 #house {
     background-color: #ccf2ff;
     font-size: 30px;
 }
 
+#house:hover {
+    background-color: #678690;
+}
+
+
 #cart {
     background-color: #ccf2ff;
     font-size: 30px;
+}
+
+#cart:hover {
+    background-color: #678690;
 }
 
 .texto-promos {

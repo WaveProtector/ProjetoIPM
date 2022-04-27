@@ -24,12 +24,12 @@ body {
     background-color: #678690;
 }
 
-#cart {
+.cart {
     background-color: #ccf2ff;
     font-size: 30px;
 }
 
-#cart:hover {
+.cart:hover {
     background-color: #678690;
 }
 
@@ -44,12 +44,12 @@ body {
     font-size: 30px;
 }
 
-#carrinho {
+.carrinho {
     font-family: 'Ubuntu', sans-serif;
     font-size: 30px;
     background-color: #ccf2ff;
 }
 
-#carrinho:hover {
+.carrinho:hover {
     background-color: #678690;
 }

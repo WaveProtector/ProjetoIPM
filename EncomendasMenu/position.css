@@ -23,14 +23,14 @@ header {
 #house {
     position: absolute;
     padding: 15px;
-    left:  200px;
+    left: 200px;
     top: 30px;
 }
 
 #cart {
     position: absolute;
     padding: 15px;
-    left:  300px;
+    left: 300px;
     top: 30px;
 }
 

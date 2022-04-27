@@ -11,9 +11,17 @@ body {
     font-size: 30px;
 }
 
+#lastpage:hover {
+    background-color: #678690;
+}
+
 #house {
     background-color: #ccf2ff;
     font-size: 30px;
+}
+
+#house:hover {
+    background-color: #678690;
 }
 
 #cart {
@@ -21,10 +29,8 @@ body {
     font-size: 30px;
 }
 
-.texto-promos {
-    display: flex;
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #7dd4ffb6;
+#cart:hover {
+    background-color: #678690;
 }
 
 #left {
@@ -35,4 +41,15 @@ body {
 #right {
     font-family: 'Ubuntu', sans-serif;
     background-color: #4AC2FF;
+    font-size: 30px;
+}
+
+#carrinho {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    background-color: #ccf2ff;
+}
+
+#carrinho:hover {
+    background-color: #678690;
 }

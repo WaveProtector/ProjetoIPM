@@ -53,4 +53,5 @@ function getTime() {
   document.getElementById("time").innerHTML = time;
   document.getElementById("date").innerHTML = date;
   document.getElementById("weekday").innerHTML = wd;
+  let t = setTimeout(function(){ getTime() }, 1000);
 }

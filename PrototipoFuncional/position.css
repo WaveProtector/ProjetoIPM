@@ -53,6 +53,8 @@ header {
     position: absolute;
     right: 250px;
     top: 20px;
+    font-size: 120px;
+    color: white;
 }
 
 /* 
@@ -107,9 +109,11 @@ main h2 {
 }
 
 #nivel {
+    width: 30%;
+    height: 30%;
     position: absolute;
-    left: 193px;
-    top: 115px;
+    left: 125px;
+    top: 130px;
     padding: 5px;
 
 }

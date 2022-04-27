@@ -11,17 +11,32 @@
 <body>
     <div id="container">
         <header>
-            <a id="titulo" >Menu de Encomendas</a>
-            <button id="lastpage" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'">Last Page<i class="fa-solid fa-arrow-turn-down-left"></i></button>
+            <button id="lastpage" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
             <button id="house" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button>
+            <button id="cart" onclick="document.location='../MinhasEncomendas/MinhasEncomendas.html'"> 0 <i class="fa-solid fa-cart-shopping"></i></button>
+            <div id="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Pesquisar produtos" />
+            </div>
         </header>
 
-        <main>
-            <button id="cart" onclick="document.location='../MinhasEncomendas/MinhasEncomendas.html'"><i class="fa-solid fa-cart-shopping"></i></button>
-            <input id="search" type="text" placeholder="Pesquisar produtos...">
-            <h1>Meu carrinho</h1>
-        </main>
-    </div>
+        <div id="mid">
+            <img id="promos" src="promocoes.png" alt="promos">
+            <div class="texto-promos">As promoções desta semana</div>
+        </div>
+
+        <div id="right">
+            <h2>Ingredientes em falta</h2>
+            <ul>
+                <li>Nenhum.</li>
+            </ul>
+        </div>
+
+        <div id="left">
+            <h2>Encomendar novamente</h2>
+            <ul>
+                <li>Nenhum.</li>
+            </ul>
+        </div>
 
 </body>
 </html>

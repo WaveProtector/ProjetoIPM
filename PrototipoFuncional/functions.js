@@ -1,24 +1,18 @@
-var count = 1;
+var count = 0;
 const mes = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
 function changeWaterLevel() {
     var x = document.getElementById("nivel");
-    if(count == 0) {
-        switch (x.innerHTML) {
-            case "ALTO": 
-               x.innerHTML = "MEDIO";
-               break;
-            case "MEDIO":
-               x.innerHTML = "BAIXO";
-               break;
-           case "BAIXO":
-               x.innerHTML = "VAZIO";
-               break;
-        }
-        count = count + 1;
+    count++;
+    if(count == 2) {
+        x.src = "water-kinda-full.png";
     }
-    else
-        count = 0;
+    if(count == 4) {
+        x.src = "water-mid.png";
+    }
+    if(count == 6) {
+        x.src = "water-low.png";
+    }
 }
 
 

@@ -6,24 +6,28 @@
 <link rel="stylesheet" href="position.css">
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-<title>Minhas Encomendas</title>
+<title>Queijo Mozzarella de Búfala</title>
 </head>
 <body>
-
     <div id="container">
         <header>
-            <a id="titulo" >Minhas Encomendas</a>
             <button id="lastpage" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
             <button id="house" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button>
+            <button id="cart" onclick="document.location='../MinhasEncomendas/MinhasEncomendas.html'"> 0 <i class="fa-solid fa-cart-shopping"></i></button>
+            <div id="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Pesquisar produtos" />
+            </div>
         </header>
 
-        <main>
-            <button id="cart" onclick="document.location='../MinhasEncomendas/MinhasEncomendas.html'"><i class="fa-solid fa-cart-shopping"></i></button>            <h1>Meu carrinho</h1>
-            <button id="encomendar">Encomendar</button>
-            <a id="agendarEncomenda">Agendar Encomenda</a>
-            <input type="date" id="dataEncomenda" value="2019-07-02T25:32Z">
-        </main>
-    </div>
+        <div id="right">
+            <p>€1,69 <button id="carrinho">Carrinho</button></p>
+        </div>
+
+        <div id="left">
+            <h2>Queijo Mozzarella de Búfala</h2>
+            <p>emb. 125gr</p>
+            <img id="promo" src="20200205_01_queijo-bufala.png">
+        </div>
 
 </body>
 </html>

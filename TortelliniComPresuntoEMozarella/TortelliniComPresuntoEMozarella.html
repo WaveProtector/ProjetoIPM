@@ -3,97 +3,114 @@
 <meta charset="UTF-8">
 <head>
 <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
+<script src = "functions.js"></script>
 <title>Tortellini Com Presunto e Mozarella</title>
 </head>
 <body>
 
-<table>
-    <tr>
-        <h2>
-        <th><button onclick="document.location='../ReceitasMenu/ReceitasMenu.html'"><i class="fa-solid fa-arrow-turn-down-left"></i></button></th>
-        <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
-        <th>Tortellini com presunto e mozzarella</th>
-        <th>
-            Pretende registar a receita para: <br></h2>
-            <form>
-            <input type="checkbox" id="almoco" name="almoco" value="almoco">
-            <label for="almoco">Almoço</label>
-            <input type="checkbox" id="jantar" name="jantar" value="jantar">
-            <label for="jantar">Jantar</label>
-            <input type="submit" value="Confirmar">
-            </form>
-        </th>
-</table>
-<section>
-    <article>
-        <h3>Ingredientes</h3>
-        <ul>
-            <li>
-                <input type="checkbox" id="chalota">
-                <label for="chalota">chalota (2 unid.)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="alho">
-                <label for="alho">alho (2 dente)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="azeite1">
-                <label for="azeite1">azeite (1 c. de sopa)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="queijomozzarella">
-                <label for="queijomozzarella">queijo mozzarella (250 g)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="presunto">
-                <label for="presunto">presunto (300 g)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="tomateseco">
-                <label for="tomateseco">tomate seco(2 unid.)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="sal">
-                <label for="sal">sal (1 c. de sobremesa)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="pimenta">
-                <label for="pimenta">pimenta (1 q.b)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="salva">
-                <label for="salva">salva (1 c. de sopa)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="pesmanjericao">
-                <label for="pesmanjericao">pés de manjericão (2 unid.)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="azeite2">
-                <label for="azeite2">azeite (6 c. de sopa)</label>
-            </li>
-            <li>
-                <input type="checkbox" id="mostarda">
-                <label for="mostarda">mostarda em grão (1 c. de sobremesa)</label>
-            </li>
-        </ul>
-    </article>
+<div id="container">
+    <table id="header">
+        <tr>
+            <h2>
+            <th><button onclick="document.location='../ReceitasMenu/ReceitasMenu.html'"><i class="fa-solid fa-arrow-left-long"></i></button></th>
+            <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
+            <th>Tortellini com presunto e mozzarella</th>
+            <th>
+                Pretende registar a receita para: <br></h2>
+                <form>
+                <input type="checkbox" id="pequeno-almoco" name="pequeno-almoco" value="pequeno-almoco">
+                <label for="pequeno-almoco">Pequeno-almoço</label>
+                <input type="checkbox" id="almoco" name="almoco" value="almoco">
+                <label for="almoco">Almoço</label>
+                <input type="checkbox" id="lanche" name="lanche" value="lanche">
+                <label for="lanche">Lanche</label>
+                <input type="checkbox" id="jantar" name="jantar" value="jantar">
+                <label for="jantar">Jantar</label>
+                <input type="submit" value="Confirmar">
+                </form>
+            </th>
+    </table>
 
-    <article>
+    <div id="ingredientes">
+        <h3>Ingredientes</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="chalota">
+                    <label for="chalota">chalota (2 unid.)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="alho">
+                    <label for="alho">alho (2 dente)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="azeite1">
+                    <label for="azeite1">azeite (1 c. de sopa)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="queijomozzarella">
+                    <label for="queijomozzarella">queijo mozzarella (250 g)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="presunto">
+                    <label for="presunto">presunto (300 g)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="tomateseco">
+                    <label for="tomateseco">tomate seco(2 unid.)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="sal">
+                    <label for="sal">sal (1 c. de sobremesa)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="pimenta">
+                    <label for="pimenta">pimenta (1 q.b)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="salva">
+                    <label for="salva">salva (1 c. de sopa)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="pesmanjericao">
+                    <label for="pesmanjericao">pés de manjericão (2 unid.)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="azeite2">
+                    <label for="azeite2">azeite (6 c. de sopa)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="mostarda">
+                    <label for="mostarda">mostarda em grão (1 c. de sobremesa)</label>
+                </li>
+            </ul>
+            <button id="encomendar">
+            <label for=encomendar>Encomendar ingredientes em falta</label></button>
+    </div>
+
+    <div id="preparacao">
         <h3>Preparação</h3>
-        <ol>
-            <li><input type="checkbox" id="passo1">
-            <label for=passo1>Passo: Para os tortellini: salpique a bancada de trabalho com farinha e misture aí a farinha e o sal. 
-                Abra uma cova e acrescente o azeite e os ovos. Amasse bem com as mãos, até obter uma massa consistente e 
-                homogénea. Deixe descansar 15 minutos. Com um rolo, estenda a massa até ficar muito fina. Corte-a em 
-                pequenos círculos com cerca de 8cm, usando um corta-massas ou um copo.</label></li>
-                <li><input type="checkbox" id="passo2"><label for=passo2>Passo</label></li>
-                <li><input type="checkbox" id="passo2"><label for=passo2>Passo</label></li>
-                <li><input type="checkbox" id="passo2"><label for=passo2>Passo</label></li>
-                <li><input type="checkbox" id="passo2"><label for=passo2>Passo</label></li>
-                <li><input type="checkbox" id="passo2"><label for=passo2>Passo</label></li>
-        </ol>
-    </article>
-</section>
+        <p id="preparacao-passo"></p>
+
+        <button id="passo1" onclick="showPasso(1)">
+        <label for=passo1>Passo 1</label></button>
+
+        <button id="passo2" onclick="showPasso(2)">
+        <label for=passo2>Passo 2</label></button>
+
+        <button id="passo3" onclick="showPasso(3)">
+        <label for=passo3>Passo 3</label></button>
+
+        <button id="passo4" onclick="showPasso(4)">
+        <label for=passo4>Passo 4</label></button>
+
+        <button id="passo5" onclick="showPasso(5)">
+        <label for=passo5>Passo 5</label></button>
+
+        <button id="passo6" onclick="showPasso(6)">
+        <label for=passo6>Passo 6</label></button>
+
+    </div>
+
+</div>
 </body>
 </html>

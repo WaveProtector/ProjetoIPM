@@ -1,0 +1,98 @@
+header {
+    font-size: 30px;
+}
+
+header {
+    background-color: #0B1028;
+    border-style: groove;
+    border-color: black;
+    color: white;
+}
+
+#receita {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 23px;
+}
+
+#meal {
+    background-color: #1C2760;
+    border-style: groove;
+    border-left: none;
+    border-color: black;
+    color: #ccf2ff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+#conf {
+    background-color: white;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+}
+
+#conf:hover {
+    background-color: #678690;
+
+}
+
+#ingredientes {
+    background-color: #4AC2FF;
+    border-style: groove;
+    border-color: black;
+    border-top: none;
+}
+
+#ingredientes h3 {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    line-height: 20px;
+}
+
+#ingredientes ul {
+    border-style: groove;
+    border-color: black;
+    background-color: #99e6ff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#encomendar {
+    position: absolute;
+    background-color: #ccf2ff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+#encomendar:hover {
+    background-color: #678690;
+
+}
+
+#preparacao {
+    background-color:#4A68FF;
+    border-style: groove;
+    border-left: none;
+    border-color: black;
+}
+
+#preparacao h3 {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    line-height: 20px;
+}
+
+#preparacao button {
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    background-color: #ccf2ff;
+
+}
+
+#preparacao button:hover {
+    background-color: #678690;
+}

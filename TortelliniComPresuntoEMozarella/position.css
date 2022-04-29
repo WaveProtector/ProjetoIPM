@@ -1,0 +1,73 @@
+#container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 650px;
+    grid-template-areas:
+        'header meal'
+        'ingredientes preparacao'
+}
+
+header {
+    grid-area: header;
+    position: relative;
+}
+
+#receita {
+    position: absolute;
+    top: 30px;
+    left: 110px;
+}
+
+#meal {
+    position: relative;
+    grid-area: meal;
+}
+
+#conf {
+    position: absolute;
+    top: 62px;
+    left: 275px;
+}
+
+#meal th form {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+}
+
+#ingredientes {
+    grid-area: ingredientes;
+}
+
+#ingredientes ul {
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#ingredientes ul li {
+    padding: 7px;
+}
+
+#encomendar {
+    position: absolute;
+    left: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#preparacao {
+    position: relative;
+    grid-area: preparacao;
+}
+
+#preparacao h3 {
+    text-align: center;
+}
+
+#preparacao button {
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}

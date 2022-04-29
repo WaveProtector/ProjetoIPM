@@ -9,10 +9,7 @@ header {
 
 #time {
     color: black;
-    background-color: #ccf2ff;
     line-height: 110px;
-    border-style: groove;
-    border-color: black;
     font-family: 'Rajdhani', sans-serif;
     font-size: 125px;
 }
@@ -27,6 +24,9 @@ header {
     color: black;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
+    border-style: groove;
+    border-color: black;
+    background-color: #ccf2ff;
 }
 
 #temperature {
@@ -72,7 +72,7 @@ main {
     border-left: none;
 }
 
-#myBtn {
+#receitas {
     font-size: 20px;
     background-color: #99e6ff;
     font-family: 'Saira Semi Condensed', sans-serif;

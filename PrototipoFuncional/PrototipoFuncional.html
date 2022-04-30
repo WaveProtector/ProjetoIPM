@@ -3,7 +3,7 @@
     <html lang="pt">
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
-    <script src = "functions.js"></script>
+    <script src = "../main.js"></script>
     <link rel="stylesheet" href="position.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap">
@@ -15,7 +15,7 @@
     <title>Interface de frigorífico inteligente</title>
 </head>
 
-<body onload="getTime()">
+<body onload="getTimePF();ingredientsMissing()">
     <div id="container">
         <header>
             <h2 id="date"></h2>
@@ -40,7 +40,7 @@
         </nav>
     
         <section>
-            <table>
+            <table id="notifications">
                 <tr>
                     <th>Notificações</th>
                 </tr>

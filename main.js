@@ -43,7 +43,7 @@ const partesPescada = ["posta de pescada", "lombos de pescada", "medalhões de p
 
 const partesBacalhau = ["posta de bacalhau", "lombos de bacalhau"];
 
-const ingredientesForaFrigorifico = [].concat(meditterânico).concat(frutas);
+const outOfFridge = [].concat(meditterânico).concat(frutas);
 
 
 //funções auxiliares
@@ -149,6 +149,8 @@ function search() {
 
 
 
+
+
 //Protótipo Funcional
 
 var count = 0;
@@ -182,20 +184,20 @@ function getTimePF() {
     document.getElementById("time").innerHTML = time;
     document.getElementById("date").innerHTML = date;
     document.getElementById("weekday").innerHTML = wd;
-    let t = setTimeout(function () { getTime() }, 1000);
+    let t = setTimeout(function () { getTimePF() }, 1000);
 }
 
 function ingredientsMissing() {
     var table = document.getElementById("notifications");
-    filter(f => (!fridge.includes(f) || !includes(f)));
+    var frstFilter = ingredients.filter(f => !fridge.includes(f));
+    var result = frstFilter.filter(f => !outOfFridge.includes(f));
     var icon = "<i class='fa-solid fa-exclamation'> ";
-    for (var i = 0; i < length; i++) {
+    for (var i = 0; i < result.length; i++) {
         var row = table.insertRow(1);
         var cell = row.insertCell(0);
-        cell.innerHTML = "Bom dia";
+        cell.innerHTML = ingredients[i];
     }
-
-
+    console.log(outOfFridge);
 
 }
 
@@ -247,6 +249,8 @@ function getTimeSchedule() {
         nodeArray.push(node);
         var textnode = document.createTextNode(i);
         node.appendChild(textnode);
+        if(i == d.getDate() && currentMonth == d.getMonth() && currentYear == d.getFullYear())
+            node.style.backgroundColor = blue;
         days.appendChild(node);
     }
 }
@@ -278,3 +282,4 @@ function next() {
 function changeMonthAndYear() {
     document.getElementsByClassName("active-month")[0].innerHTML = month[currentMonth] + " " + currentYear;
 }
+

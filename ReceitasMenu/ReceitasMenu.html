@@ -3,7 +3,6 @@
 <meta charset="UTF-8">
 <head>
 <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
-<script src="../main.js"></script>
 <link rel="stylesheet" href="position.css">
 <title>Receitas</title>
 </head>
@@ -26,21 +25,32 @@
                 <th>Sem glutén</th>
                 <th>Sem lactose</th>
                 <th>Vegetariana</th>
-                <th class="search-bar"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Pesquisar receitas" onkeyup="search()" id="search"></input></th>
-                </tr>
+                <th class="wrapper">
+                    <div class="search-input">
+                      <a href="" target="_blank" hidden></a>
+                      <input type="text" placeholder="Type to search..">
+                      <div class="autocom-box">
+                        
+                      </div>
+                      <div class="icon"><i class="fas fa-search"></i></div>
+                    </div>
+                </th>    
+            </tr>
             </table>
         </h2>
     </div>
 
-    <div></div>
+    <div>
+        <ul id="recipes">
+            <li><a href="#">Esparguete à bolonhesa</a></li>
+            <li><a href="../TortelliniComPresuntoEMozarella/TortelliniComPresuntoEMozarella.html">Tortellini com presunto e mozzarella</a></li>
+            <li><a href="#">Risotto de cogumelos</a></li>
+        </ul>
+    </div>
 
     <div class="left">
         <h2>Escolhidas anteriormente</h2>
-            <ul id="recipes">
-                <li><a href="#">Esparguete à bolonhesa</a></li>
-                <li><a href="../TortelliniComPresuntoEMozarella/TortelliniComPresuntoEMozarella.html">Tortellini com presunto e mozzarella</a></li>
-                <li><a href="#">Risotto de cogumelos</a></li>
-            </ul>
+            
     </div>
 
     <div class="right">
@@ -48,6 +58,6 @@
     </div>
 
 </div>
-
+<script src="function.js"></script>
 </body>
 </html>

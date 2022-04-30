@@ -24,18 +24,13 @@ body {
     background-color: #678690;
 }
 
-#cart {
+.cart {
     background-color: #ccf2ff;
     font-size: 30px;
 }
 
-#cart:hover {
+.cart:hover {
     background-color: #678690;
-}
-
-#title {
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
 }
 
 #left {
@@ -46,9 +41,15 @@ body {
 #right {
     font-family: 'Ubuntu', sans-serif;
     background-color: #4AC2FF;
+    font-size: 30px;
 }
 
-.product-header {
+.carrinho {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
+    background-color: #ccf2ff;
+}
+
+.carrinho:hover {
+    background-color: #678690;
 }

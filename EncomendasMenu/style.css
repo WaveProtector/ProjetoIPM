@@ -25,12 +25,12 @@ body {
 }
 
 
-#cart {
+.cart {
     background-color: #ccf2ff;
     font-size: 30px;
 }
 
-#cart:hover {
+.cart:hover {
     background-color: #678690;
 }
 

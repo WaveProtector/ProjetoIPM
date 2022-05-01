@@ -9,7 +9,10 @@ header {
 
 #time {
     color: black;
+    background-color: #ccf2ff;
     line-height: 110px;
+    border-style: groove;
+    border-color: black;
     font-family: 'Rajdhani', sans-serif;
     font-size: 125px;
 }
@@ -24,9 +27,6 @@ header {
     color: black;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
-    border-style: groove;
-    border-color: black;
-    background-color: #ccf2ff;
 }
 
 #temperature {
@@ -78,7 +78,7 @@ main {
     font-family: 'Saira Semi Condensed', sans-serif;
 }
 
-#myBtn:hover {
+#receitas:hover {
     background-color: #678690;
 }
 

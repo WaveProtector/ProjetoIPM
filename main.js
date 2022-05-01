@@ -255,8 +255,11 @@ function getTimeSchedule() {
         nodeArray.push(node);
         var textnode = document.createTextNode(i);
         node.appendChild(textnode);
-        if(i == d.getDate() && currentMonth == d.getMonth() && currentYear == d.getFullYear())
-            node.style.backgroundColor = blue;
+        if(i == d.getDate() && currentMonth == d.getMonth() && currentYear == d.getFullYear()) {
+            var spanNode = document.createElement("span");
+            spanNode.classList.add("active");
+            node.appendChild(spanNode);
+        }
         days.appendChild(node);
     }
 }

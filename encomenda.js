@@ -24,6 +24,9 @@ for (let i=0; i < products.length; i++) {
     }
 }
 
+document.getElementsByClassName("btn +").onclick = addsToCart();
+document.getElementsByClassName("btn -").onclick = subtractsToCart();
+
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
 
@@ -54,7 +57,6 @@ function setItems(product) {
     if(cartItems != null) {
 
         if(cartItems[product.tag] == undefined) {
-            console.log("azeite xd");
             cartItems = {
                 ...cartItems,
                 [product.tag]: product
@@ -76,7 +78,7 @@ function totalCost(product) {
     console.log(cartCost);
     if(cartCost != null){
         cartCost = parseInt(cartCost);
-        localStorage.setItem("totalCost", cartCost + product.price);
+        localStorage.setItem("totalCost", cartCost + product.price * product.inCart);
     } else {
         localStorage.setItem("totalCost", product.price);
     }
@@ -86,26 +88,28 @@ function totalCost(product) {
 function displayCart() {
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
-    let productContainer = document.querySelector(".products");
+    let productContainer = document.querySelector(".cart-items");
     let cartCost = localStorage.getItem('totalCost');
 
     if(cartItems && productContainer) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div class="product">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="../Produtos/images/${item.tag}.jpg">
-                <span>${item.name}</span>
-            </div>
-            <div class="price">€${item.price}</div>
-            <div class="quantity">
-                <i class="fa-solid fa-plus"></i>
-                <span>${item.inCart}</span>
-                <i class="fa-solid fa-minus"></i>
-            </div>
-            <div class="total">
-                €${item.inCart * item.price}
+            <div class="cart-items">
+                <div class="item">
+                    <img src="../Produtos/images/${item.tag}.jpg">
+                    <div class="about">
+                        <div class="count">${item.name}</div>
+                    </div>
+                    <div class="counter">
+                        <div class="btn +">+</div>
+                        <span>${item.inCart}</span>
+                        <div class="btn -">-</div>
+                    </div>
+                    <div class="price">
+                        <div class="amount">€${item.inCart * item.price}</div>
+                    </div>
+                </div>
             </div>
             `;
         });
@@ -121,6 +125,19 @@ function displayCart() {
         `;
     }
     
+}
+
+function buysEverything() {
+    localStorage.clear();
+    document.location.reload();
+}
+
+function addsToCart() {
+    
+}
+
+function subtractsToCart() {
+
 }
 
 onLoadCartNumbers();

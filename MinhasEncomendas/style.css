@@ -38,17 +38,16 @@ body {
     color: white;
 }
 
-#left {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #4AC2FF;
-}
-
-#right {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #4AC2FF;
-}
-
 .product-header {
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
+}
+
+#encomenda {
+    background-color: #ccf2ff;
+    font-size: 18px;
+}
+
+#encomenda:hover {
+    background-color: #678690;
 }

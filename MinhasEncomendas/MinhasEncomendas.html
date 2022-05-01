@@ -12,30 +12,27 @@
 
     <div id="container">
         <header>
-            <div class="overlay">
-                <button id="lastpage" onclick="document.location='../EncomendasMenu/EncomendasMenu.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
-                <button id="house" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button>
-                <h1 id="title">O Meu Carrinho</h1>
-            </div>
+            <button id="lastpage" onclick="document.location='../EncomendasMenu/EncomendasMenu.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
+            <button id="house" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button>
+            <h1 id="title">O Meu Carrinho</h1>
         </header>
 
         <main>
             <div class="products-container">
                 <div class="product-header">
-                    <h5 class="product-title">PRODUCT</h5>
-                    <h5 class="price">PRICE</h5>
-                    <h5 class="quantity">QUANTITY</h5>
-                    <h5 class="total">TOTAL</h5>
+
                 </div>
-                <div class="products">
+                <div class="cart-items">
 
                 </div>
             </div>
-            <!--<div class="encomenda-section">
-                <button id="encomendar">Encomendar</button>
+            <div class="encomendar">
                 <a id="agendarEncomenda">Agendar Encomenda</a>
                 <input type="date" id="dataEncomenda" value="2019-07-02T25:32Z">
-            </div>-->
+                <br>
+                <br>
+                <button id="encomenda" onclick="buysEverything()">Encomendar</button>
+            </div>
         </main>
     </div>
 

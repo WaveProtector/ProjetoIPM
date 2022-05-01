@@ -53,50 +53,6 @@ function addZero(i) {
     return i;
 }
 
-//
-
-let carts = document.querySelectorAll("button.carrinho");
-
-let products = [
-    {
-        name: 'Queijo Mozzarella',
-        tag: 'queijoMozzarella',
-        price: 1.69,
-        inCart: 0            //depois fazer o resto para o resto dos produtos
-    }
-];
-
-for (let i = 0; i < carts.length; i++) {
-    carts[i].addEventListener('click', () => {
-        cartNumbers();
-    });
-}
-
-function onLoadCartNumbers() {
-    let productNumbers = localStorage.getItem('cartNumbers');
-
-    if (productNumbers) {
-        document.querySelector('.cart span').textContent = productNumbers;
-    }
-}
-
-function cartNumbers() {
-    let productNumbers = localStorage.getItem('cartNumbers');
-
-    productNumbers = parseInt(productNumbers);
-
-
-    if (productNumbers) {
-        localStorage.setItem('cartNumbers', productNumbers + 1);
-        document.querySelector('.cart span').textContent = productNumbers + 1;
-    } else {
-        localStorage.setItem('cartNumbers', 1);
-        document.querySelector('.cart span').textContent = 1;
-    }
-}
-
-onLoadCartNumbers();
-
 //Receita Tortelini
 
 var ingredients = ["chalota", "alho", "azeite", "queijo mozzarella", "presunto", "tomate seco", "sal", "pimenta", "salva", "pés de manjericão", "mostarda em grão"];
@@ -249,8 +205,6 @@ function getTimeSchedule() {
         nodeArray.push(node);
         var textnode = document.createTextNode(i);
         node.appendChild(textnode);
-        if(i == d.getDate() && currentMonth == d.getMonth() && currentYear == d.getFullYear())
-            node.style.backgroundColor = blue;
         days.appendChild(node);
     }
 }

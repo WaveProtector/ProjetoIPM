@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="position.css">
 <title>Receitas</title>
 </head>
-<body>
+<body onload="showAllRecipes()">
 
 
 <div id="container">
@@ -20,11 +20,11 @@
                 <tr>
                 <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-arrow-left-long"></i></button></th>
                 <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
-                <th>Carne</th>
-                <th>Dieta Mediterrânica</th>
-                <th>Sem glutén</th>
-                <th>Sem lactose</th>
-                <th>Vegetariana</th>
+                <th onclick="showMeatDishes()" id="meat">Carne</th>
+                <th onclick="showMeditteraneanDietDishes()" id="meditteranean">Dieta Mediterrânica</th>
+                <th id="gluten">Sem glutén</th>
+                <th onclick="showMWthoutLactoseDishes()" id="lactose">Sem lactose</th>
+                <th onclick="showWthoutMeatDishes()" id="vegetarian">Vegetariana</th>
                 <th class="wrapper">
                     <div class="search-input">
                       <a href="" target="_blank" hidden></a>
@@ -42,22 +42,26 @@
 
     <div>
         <ul id="recipes">
-            <li><a href="#">Esparguete à bolonhesa</a></li>
-            <li><a href="../TortelliniComPresuntoEMozarella/TortelliniComPresuntoEMozarella.html">Tortellini com presunto e mozzarella</a></li>
-            <li><a href="#">Risotto de cogumelos</a></li>
         </ul>
     </div>
+
+    
 
     <div class="left">
         <h2>Escolhidas anteriormente</h2>
             
     </div>
 
+    <div class="add-recipe">
+        <button onclick="document.location='../CriarReceita/CriarReceita.html'">Criar Receita</button>
+    </div>
+
     <div class="right">
         <p>wip</p>
     </div>
 
+
 </div>
-<script src="function.js"></script>
+<script src="../main.js"></script>
 </body>
 </html>

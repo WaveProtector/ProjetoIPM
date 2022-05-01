@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta charset="UTF-8">
+
+<head>
+    <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
+    <script src="../../main.js"></script>
+    <link rel="stylesheet" href="../position.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Risotto De Cogumelos</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+            <th><button onclick="document.location='../../ReceitasMenu/ReceitasMenu.html'"><i
+                        class="fa-solid fa-arrow-left-long"></i></button></th>
+            <th><button onclick="document.location='../../PrototipoFuncional/PrototipoFuncional.html'"><i
+                        class="fa-solid fa-house"></i></button></th>
+            <a id="receita">Risotto De Cogumelos</a>
+        </header>
+
+        <table id="meal">
+            <tr>
+                <th>
+                    <form>
+                        Pretende registar a receita para:<br>
+                        <input type="checkbox" id="pequeno-almoco" name="pequeno-almoco" value="pequeno-almoco">
+                        <label for="pequeno-almoco">Pequeno-almoço</label>
+                        <input type="checkbox" id="almoco" name="almoco" value="almoco">
+                        <label for="almoco">Almoço</label>
+                        <input type="checkbox" id="lanche" name="lanche" value="lanche">
+                        <label for="lanche">Lanche</label>
+                        <input type="checkbox" id="jantar" name="jantar" value="jantar">
+                        <label for="jantar">Jantar</label> <br>
+                    </form>
+                    <input id="conf" type="submit" value="Confirmar">
+                </th>
+            </tr>
+
+        </table>
+
+        <div id="ingredientes">
+            <h3>Ingredientes</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="cogumelo-Portobello">
+                    <label for="cogumelo-Portobello">cogumelo Portobello 350 g</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="alho">
+                    <label for="alho">alho (2 dente)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="talo-de-aipo">
+                    <label for="talo-de-aipo">talo de aipo 4 unid.</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="cebola">
+                    <label for="cebola">cebola 100 g</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="arroz-para-risotto">
+                    <label for="arroz-para-risotto">arroz para risotto 200 g</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="vinho-branco">
+                    <label for="vinho-branco">vinho branco 1,5 dl</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="sal">
+                    <label for="sal">sal 1 c. de sopa</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="queijo-brie">
+                    <label for="queijo-brie">queijo brie 60 g</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="rúcula">
+                    <label for="rúcula">rúcula
+                        100 g</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="água">
+                    <label for="água">água 5 dl</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="pimenta-de-moinho">
+                    <label for="pimenta-de-moinho">pimenta de moinho
+                        1 q.b.</label>
+                </li>
+            </ul>
+            <button id="encomendar">
+                <label for=encomendar>Encomendar ingredientes em falta</label></button>
+        </div>
+
+        <div id="preparacao">
+            <h3>Preparação</h3>
+
+            <button id="passo1" onclick="showPasso(1, 'Risotto De Cogumelos')">
+                <label for=passo1>Passo 1</label></button>
+            <br>
+            <button id="passo2" onclick="showPasso(2, 'Risotto De Cogumelos')">
+                <label for=passo2>Passo 2</label></button>
+            <br>
+            <button id="passo3" onclick="showPasso(3, 'Risotto De Cogumelos')">
+                <label for=passo3>Passo 3</label></button>
+            <br>
+            <button id="passo4" onclick="showPasso(4, 'Risotto De Cogumelos')">
+                <label for=passo4>Passo 4</label></button>
+            <br>
+            <button id="passo5" onclick="showPasso(5, 'Risotto De Cogumelos')">
+                <label for=passo5>Passo 5</label></button>
+            <br>
+            <button id="passo6" onclick="showPasso(6, 'Risotto De Cogumelos')">
+                <label for=passo6>Passo 6</label></button>
+
+            <p id="preparacao-passo"></p>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

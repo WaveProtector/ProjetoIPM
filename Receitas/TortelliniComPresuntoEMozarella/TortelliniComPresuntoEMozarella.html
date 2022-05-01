@@ -3,9 +3,9 @@
 <meta charset="UTF-8">
 <head>
 <script src="https://kit.fontawesome.com/d648776c9a.js" crossorigin="anonymous"></script>
-<script src = "functions.js"></script>
-<link rel="stylesheet" href="position.css">
-<link rel="stylesheet" href="style.css">
+<script src = "../../main.js"></script>
+<link rel="stylesheet" href="../position.css">
+<link rel="stylesheet" href="../style.css">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 <title>Tortellini Com Presunto e Mozarella</title>
 </head>
@@ -14,8 +14,8 @@
 <div id="container">
 
     <header>
-        <th><button onclick="document.location='../ReceitasMenu/ReceitasMenu.html'"><i class="fa-solid fa-arrow-left-long"></i></button></th>
-        <th><button onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
+        <th><button onclick="document.location='../../ReceitasMenu/ReceitasMenu.html'"><i class="fa-solid fa-arrow-left-long"></i></button></th>
+        <th><button onclick="document.location='../../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button></th>
         <a id="receita">Tortellini com presunto e mozzarella</a>
     </header>
 
@@ -97,25 +97,26 @@
 
     <div id="preparacao">
         <h3>Preparação</h3>
-        <p id="preparacao-passo"></p>
-
-        <button id="passo1" onclick="showPasso(1)">
+        
+        <button id="passo1" onclick="showPasso(1, 'Tortellini Com Presunto e Mozarella')">
         <label for=passo1>Passo 1</label></button>
         <br>
-        <button id="passo2" onclick="showPasso(2)">
+        <button id="passo2" onclick="showPasso(2, 'Tortellini Com Presunto e Mozarella')">
         <label for=passo2>Passo 2</label></button>
         <br>
-        <button id="passo3" onclick="showPasso(3)">
+        <button id="passo3" onclick="showPasso(3, 'Tortellini Com Presunto e Mozarella')">
         <label for=passo3>Passo 3</label></button>
         <br>
-        <button id="passo4" onclick="showPasso(4)">
+        <button id="passo4" onclick="showPasso(4, 'Tortellini Com Presunto e Mozarella')">
         <label for=passo4>Passo 4</label></button>
         <br>
-        <button id="passo5" onclick="showPasso(5)">
+        <button id="passo5" onclick="showPasso(5, 'Tortellini Com Presunto e Mozarella')">
         <label for=passo5>Passo 5</label></button>
         <br>
-        <button id="passo6" onclick="showPasso(6)">
+        <button id="passo6" onclick="showPasso(6,'Tortellini Com Presunto e Mozarella')">
         <label for=passo6>Passo 6</label></button>
+        
+        <p id="preparacao-passo"></p>
 
     </div>
 

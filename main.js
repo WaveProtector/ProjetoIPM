@@ -33,7 +33,7 @@ const frutas = ["limão", "maçã", "laranja", "pêra", "abacate", "abacaxi", "a
     "cereja", "morangos", "cidra", "côco", "figo", "framboesa", "groselha", "kiwi", "lima", "manga", "maracujá",
     "melância", "melão", "tomate", "tomate seco"];
 
-const molhos = ["ketchup", "mostarda", "maionese", "mostarda em grão"];
+const molhos = ["ketchup", "mostarda", "maionese"];
 
 const peixes = ["pescada", "dourada média"]
 
@@ -43,7 +43,12 @@ const partesPescada = ["posta de pescada", "lombos de pescada", "medalhões de p
 
 const partesBacalhau = ["posta de bacalhau", "lombos de bacalhau"];
 
-const outOfFridge = [].concat(meditterânico).concat(frutas);
+const especiarias = [ "pés de manjericão", "sal", "chalota"];
+
+const grao = ["mostarda em grão"];
+
+//ingredientes tipicos que não se encontram dentro do frigorifico
+const outOfFridge = [].concat(meditterânico).concat(frutas).concat(grao).concat(especiarias);
 
 
 //funções auxiliares
@@ -111,6 +116,7 @@ function search() {
 
 var count = 0;
 
+//ingredientes atualmente no frigorifico
 var fridge = ["presunto"];
 
 
@@ -147,11 +153,11 @@ function ingredientsMissing() {
     var table = document.getElementById("notifications");
     var frstFilter = ingredients.filter(f => !fridge.includes(f));
     var result = frstFilter.filter(f => !outOfFridge.includes(f));
-    var icon = "<i class='fa-solid fa-exclamation'> ";
+    var warning = "<i class='fa-solid fa-exclamation'></i> Faltam ingredientes para a receita do jantar: -";
     for (var i = 0; i < result.length; i++) {
         var row = table.insertRow(1);
         var cell = row.insertCell(0);
-        cell.innerHTML = ingredients[i];
+        cell.innerHTML = warning.concat(result[i]);
     }
     console.log(outOfFridge);
 

@@ -32,10 +32,10 @@ header {
 }
 
 #conf {
-    background-color: white;
+    background-color: #ccf2ff;
     color: black;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 #conf:hover {

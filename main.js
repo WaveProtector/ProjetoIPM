@@ -62,11 +62,12 @@ var r0 = {
         "Junte a carne de novilho picada, o sal e deixe cozinhar em lume médio.",
         "Acrescente o tomate pelado aos cubos, a polpa de tomate e o tomilho seco.",
         "Misture bem e deixe cozinhar mais um pouco para apurar.",
-        "Sirva o esparguete coberto com o molho e polvilhe com queijo parmesão ralado."]
+        "Sirva o esparguete coberto com o molho e polvilhe com queijo parmesão ralado."],
+        'refeicao': []
 }
 
 var r1 = {
-    'name': "Tortellini Com Presunto E Mozarella",
+    'name': "Tortellini Com Presunto e Mozarella",
     'link': "../Receitas/TortelliniComPresuntoEMozarella/TortelliniComPresuntoEMozarella.html",
     'ingredients': ["chalota", "alho", "azeite", "queijo mozzarella", "presunto", "tomate seco", "sal", "pimenta", "salva", "pés de manjericão", "mostarda em grão"],
     'passos': ["Para os tortellini: salpique a bancada de trabalho com farinha e misture aí a farinha e o sal. Abra uma cova e acrescente o azeite e os ovos. Amasse bem com as mãos, até obter uma massa consistente e homogénea. Deixe descansar 15 minutos. Com um rolo, estenda a massa até ficar muito fina. Corte-a em pequenos círculos com cerca de 8cm, usando um corta-massas ou um copo.",
@@ -74,7 +75,8 @@ var r1 = {
         "Envolva bem e tempere com metade do sal, pimenta e a salva cortada em troços finos. Retire do lume, deixe arrefecer um pouco e recheie os tortellini. Reserve.",
         "Coloque um pouco de recheio no centro dos círculos de massa e feche-os, unindo as pontas. Passe com um pouco de água nos bordos e pressione para prender melhor.",
         "Lamine o manjericão e a salva, coloque-os num tacho pequeno e adicione o azeite e a mostarda em grão. Envolva bem e leve ao lume até levantar fervura. Retire e reserve.",
-        "Coza a massa em água a ferver temperada com sal durante 3 minutos ou até ficar al dente. Retire, escorra e coloque os tortellini num prato fundo. Regue-os com o molho de ervas quente. Sirva de imediato."]
+        "Coza a massa em água a ferver temperada com sal durante 3 minutos ou até ficar al dente. Retire, escorra e coloque os tortellini num prato fundo. Regue-os com o molho de ervas quente. Sirva de imediato."],
+        'refeicao': []
 }
 
 var r2 = {
@@ -86,8 +88,8 @@ var r2 = {
         "Deixe fritar, mexendo de vez em quando, até ficar translúcido. Regue com o vinho branco, adicione os cogumelos e cozinhe, mexendo frequentemente, até absorver o líquido.",
         "Ferva a água com o sal e adicione-a, a pouco e pouco, ao arroz, mexendo à medida que for sendo absorvida.",
         "Assim que o arroz estiver cozido, o que deve demorar cerca de 20 minutos, retire-o do lume, junte-lhe o queijo cortado em pedaços pequenos e as folhas de rúcula e envolva.",
-        "Tempere com pimenta moída no momento e sirva sem demora."
-    ]
+        "Tempere com pimenta moída no momento e sirva sem demora."],
+        'refeicao': []
 }
 
 var recipes = [r0, r1, r2];
@@ -98,18 +100,70 @@ function addZero(i) {
     return i;
 }
 
-//Receita Tortelini
+//Receitas
 
 var ingredients = ["chalota", "alho", "azeite", "queijo mozzarella", "presunto", "tomate seco", "sal", "pimenta", "salva", "pés de manjericão", "mostarda em grão"];
 
 function showPasso(p, recipeName) {
     var x = document.getElementById("preparacao-passo");
-    var recipeSteps;
     for (var i = 0; i < recipes.length; i++) {
         if (recipes[i].name == recipeName)
-            recipeSteps = recipes[i].passos;
+            x.innerHTML = "Passo " + p + ": " + recipes[i].passos[p - 1];
     }
-    x.innerHTML = "Passo " + p + ": " + recipeSteps[p - 1];
+}
+
+
+function checkBreakfast(recipeName) {
+    if(confirm("Deseja comer esta refeição ao pequeno-almoço?")) {
+        for(var i = 0; i < recipes.length; i++) {
+            if(recipes[i].name === recipeName) {
+                recipes[i].refeicao.push("Pequeno-almoço");
+                document.getElementById("pequeno-almoco").disabled = true;
+                console.log(recipes[i].refeicao);
+            }
+        }
+    }
+}
+
+function checkLunch(recipeName) {
+    if(confirm("Deseja comer esta refeição ao almoço?")) {
+        for(var i = 0; i < recipes.length; i++) {
+            if(recipes[i].name === recipeName) {
+                recipes[i].refeicao.push("Almoço");
+                document.getElementById("almoco").disabled = true;
+            }
+        }
+    }
+}
+
+function checkSnack(recipeName) {
+    if(confirm("Deseja comer esta refeição ao lanche?")){
+        for(var i = 0; i < recipes.length; i++) {
+            if(recipes[i].name === recipeName) {
+                recipes[i].refeicao.push("Lanche");
+                document.getElementById("lanche").disabled = true;
+            }
+        }
+    }
+}
+
+function checkDinner(recipeName) {
+    if(confirm("Deseja comer esta refeição ao jantar?")){
+        for(var i = 0; i < recipes.length; i++) {
+            if(recipes[i].name === recipeName) {
+                recipes[i].refeicao.push("Jantar");
+                document.getElementById("jantar").disabled = true;
+            }
+        }
+    }
+}
+
+function setRefeicao(recipeName) {
+    for(var i = 0; i < recipes.length; i++) {
+        if(recipeName == recipes[i].name) {
+
+        }
+    }
 }
 
 
@@ -284,6 +338,7 @@ function getTimePF() {
     let date = d.getDate() + " de " + month[d.getMonth()];
     document.getElementById("time").innerHTML = time;
     document.getElementById("date").innerHTML = date;
+    document.getElementById("date").style.display = "";
     document.getElementById("weekday").innerHTML = wd;
     let t = setTimeout(function () { getTimePF() }, 1000);
 }
@@ -300,6 +355,17 @@ function ingredientsMissingPF() {
         var cell = row.insertCell(0);
         cell.innerHTML = warning.concat(result[j]);
     }
+}
+
+function registerMealPF() {
+    var table = document.getElementById("notifications");
+    var refeicao = recipes[0].refeicao;
+    var warning = "<i class='fa-solid fa-calendar'></i> Refeição planeada para: ";
+    //for (var j = 0; j < result.length; j++) {
+        var row = table.insertRow(1);
+        var cell = row.insertCell(0);
+        cell.innerHTML = warning.concat(refeicao);
+    //}
 }
 
 //Agenda

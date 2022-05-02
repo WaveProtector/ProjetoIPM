@@ -23,22 +23,17 @@ header {
     grid-area: meal;
 }
 
-#conf {
-    position: absolute;
-    top: 62px;
-    left: 275px;
-}
-
 #meal th form {
     position: absolute;
-    top: 10px;
-    left: 200px;
+    top: 12px;
+    left: 80px;
 }
 
 #conf {
     position: absolute;
-    top: 65px;
-    left: 150px;
+    top: 15px;
+    left: 450px;
+    padding: 10px;
 }
 
 #ingredientes {

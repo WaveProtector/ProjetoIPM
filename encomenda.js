@@ -11,6 +11,54 @@ let products = [
         name: 'Azeite',
         tag: 'azeite',
         price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Cebola Chalota',
+        tag: 'chalota',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Alho',
+        tag: 'alho',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Presunto Fatiado',
+        tag: 'presunto',
+        price: 3,
+        inCart: 0
+    },
+    {
+        name: 'Tomate Seco',
+        tag: 'tomate',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Sal Grosso',
+        tag: 'sal',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Pimenta Preta',
+        tag: 'pimenta',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Manjericão',
+        tag: 'manjericao',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Mostarda em Grão em Frasco',
+        tag: 'mostardaGrao',
+        price: 2,
         inCart: 0            //depois fazer o resto para o resto dos produtos
     }
 ];
@@ -78,7 +126,7 @@ function totalCost(product) {
     console.log(cartCost);
     if(cartCost != null){
         cartCost = parseInt(cartCost);
-        localStorage.setItem("totalCost", cartCost + product.price * product.inCart);
+        localStorage.setItem("totalCost", cartCost + (product.price * product.inCart));
     } else {
         localStorage.setItem("totalCost", product.price);
     }

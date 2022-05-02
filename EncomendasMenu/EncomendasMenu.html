@@ -8,14 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 <title>Menu de Encomendas</title>
 </head>
-<body>
+<body onload="ingredientsMissingEM();insertRecipesEM()">
     <div id="container">
         <header>
             <button id="lastpage" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
             <button id="house" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button>
             <button class="cart" onclick="document.location='../MinhasEncomendas/MinhasEncomendas.html'"><i class="fa-solid fa-cart-shopping"></i><span> 0</span></button>
             <div id="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Pesquisar produtos" />
+                <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Pesquisar produtos" id="search" onkeyup="searchEM()"/>
             </div>
         </header>
 
@@ -26,18 +26,17 @@
 
         <div id="right">
             <h2>Ingredientes em falta</h2>
-            <ul>
-                <li>Nenhum.</li>
+            <ul id="notifications">
             </ul>
         </div>
 
         <div id="left">
             <h2>Encomendar novamente</h2>
             <ul>
-                <li>Nenhum.</li>
             </ul>
         </div>
     </div>
+    <script src="../main.js"></script>
     <script src="../encomenda.js"></script>
 </body>
 </html>

@@ -4,60 +4,70 @@ let products = [
     {
         name: 'Queijo Mozzarella',
         tag: 'queijoMozzarella',
+        link: '../Produtos/QueijoMozzarellaDeBufala/QueijoMozzarellaDeBufala.html',
         price: 1,
         inCart: 0            
     },
     {
         name: 'Azeite',
         tag: 'azeite',
+        link: '../Produtos/Azeite/Azeite.html',
         price: 2,
         inCart: 0
     },
     {
         name: 'Cebola Chalota',
         tag: 'chalota',
+        link: '../Produtos/Chalota/chalota.html',
         price: 1,
         inCart: 0
     },
     {
         name: 'Alho',
         tag: 'alho',
+        link: '../Produtos/Alho/alho.html',
         price: 2,
         inCart: 0
     },
     {
         name: 'Presunto Fatiado',
         tag: 'presunto',
+        link: '../Produtos/Presunto/presunto.html',
         price: 3,
         inCart: 0
     },
     {
         name: 'Tomate Seco',
         tag: 'tomate',
+        link: '../Produtos/Tomate/tomate.html',
         price: 1,
         inCart: 0
     },
     {
         name: 'Sal Grosso',
         tag: 'sal',
+        link: '../Produtos/Sal/sal.html',
         price: 1,
         inCart: 0
     },
     {
         name: 'Pimenta Preta',
         tag: 'pimenta',
+        link: '../Produtos/Pimenta/pimenta.html',
         price: 1,
         inCart: 0
     },
     {
         name: 'Manjericão',
         tag: 'manjericao',
+        link: '../Produtos/Manjericão/manjericao.html',
         price: 2,
         inCart: 0
     },
     {
         name: 'Mostarda em Grão em Frasco',
         tag: 'mostardaGrao',
+        link: '../Produtos/Mostarda Grão/mostardaGrao.html',
         price: 2,
         inCart: 0            //depois fazer o resto para o resto dos produtos
     }
@@ -186,6 +196,42 @@ function addsToCart() {
 
 function subtractsToCart() {
 
+}
+var li;
+
+function searchEM() {
+    var input, filter;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+function insertRecipesEM() {
+    var node, textNode, linkNode, link;
+    if(products.length == 0) {
+        node = document.createElement("li");
+        textNode = document.createTextNode("Nenhum.");
+        document.getElementsByTagName("ul")[1].appendChild(node);
+    }
+    for (var i = 0; i < products.length; i++) {
+        node = document.createElement("li");
+        link = products[i].link;
+        linkNode = document.createElement("a");
+        linkNode.href = link;
+        textNode = document.createTextNode(products[i].name);
+        linkNode.appendChild(textNode);
+        node.appendChild(linkNode);
+        document.getElementsByTagName("ul")[1].appendChild(node);
+    }
+    li = document.getElementsByTagName("ul")[1].getElementsByTagName("li");
 }
 
 onLoadCartNumbers();

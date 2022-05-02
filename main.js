@@ -446,3 +446,27 @@ function next() {
 function changeMonthAndYear() {
     document.getElementsByClassName("active-month")[0].innerHTML = month[currentMonth] + " " + currentYear;
 }
+
+var notes = [];
+
+function putInNotes() {
+    var text = document.getElementById("textInput").value;
+    document.getElementById("textInput").value = "";
+    var node = document.createElement("li");
+    var textNode = document.createTextNode(text);
+    node.appendChild(textNode);
+    document.getElementById("notes").appendChild(node);
+    notes.push(text);
+    localStorage.setItem("agendaNotes", notes);
+}
+
+function printNotes() {
+    var notes = localStorage.getItem("agendaNotes");
+    
+    for(var i = 0; i < notes.length; i++) {
+        var node = document.createElement("li");
+    var textNode = document.createTextNode(text);
+    node.appendChild(textNode);
+    document.getElementById("notes").appendChild(node);
+    }
+}

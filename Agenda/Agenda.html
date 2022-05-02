@@ -9,7 +9,7 @@
 <style>
 </style>
 </head>
-<body onload="getTimeSchedule()">
+<body onload="getTimeSchedule();printNotes()">
 
 <div id="container">
   <header>
@@ -45,10 +45,13 @@
 
 <section>
     <h2 class="notes-title">Notas</h2>
-    <ul class="notes">
-      <li>Escreva aqui.</li>
-    </ul>
+    <div class="notes">
+      <input type="text" placeholder="Inserir Notas Aqui" id="textInput">
+      <input type="submit" value="Inserir" onclick="putInNotes()">
+      <ul id="notes">
 
+      </ul>
+    </div>
 </section>
 
 </div>

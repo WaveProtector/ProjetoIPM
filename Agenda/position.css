@@ -4,7 +4,7 @@ body {font-family: Verdana, sans-serif;}
 
 #container {
     display: grid;
-    grid-template-columns: 94% auto;
+    grid-template-columns: 85% auto;
     grid-template-rows: auto;
     grid-template-areas:
         'header header'
@@ -45,7 +45,7 @@ section {
 /* Month header */
 .month {
   padding: 70px 25px;
-  width: 50%;
+  width: 60%;
   background: #4AC2FF;
   text-align: center;
 }
@@ -78,7 +78,7 @@ section {
 /* Weekdays (Mon-Sun) */
 .weekdays {
   margin: 0;
-  width: 50%;
+  width: 60%;
   padding: 10px 0;
   background-color:#2E419F;
 }
@@ -92,7 +92,7 @@ section {
 
 /* Days (1-31) */
 .days {
-  width: 50%;
+  width: 60%;
   padding: 10px 0;
   background: #ddd;
   margin: 0;

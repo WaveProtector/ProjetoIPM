@@ -7,11 +7,14 @@ header {
     border-style: groove;
     border-color: black;
     color: white;
+    position: relative;
 }
 
 #receita {
+    position: absolute;
     font-family: 'Ubuntu', sans-serif;
     font-size: 23px;
+    left: 230px;
 }
 
 #meal {
@@ -34,6 +37,32 @@ header {
 #conf:hover {
     background-color: #678690;
 
+}
+
+#house {
+    position: absolute;
+    padding: 15px;
+    left: 90px;
+    top: 10px;
+    background-color: #ccf2ff;
+    font-size: 30px;
+}
+
+#house:hover {
+    background-color: #678690;
+}
+
+#lastpage {
+    position: absolute;
+    padding: 15px;
+    left: 10px;
+    top: 10px;
+    background-color: #ccf2ff;
+    font-size: 30px;
+}
+
+#lastpage:hover {
+    background-color: #678690;
 }
 
 #ingredientes {

@@ -26,13 +26,13 @@
                 <th>
                     <form>
                         Pretende registar a receita para:<br>
-                        <input type="checkbox" id="pequeno-almoco" name="pequeno-almoco" value="pequeno-almoco">
+                        <button  id="pequeno-almoco" onclick="checkBreakfast('Tortellini Com Presunto e Mozarella')" >
                         <label for="pequeno-almoco">Pequeno-almoço</label>
-                        <input type="checkbox" id="almoco" name="almoco" value="almoco">
+                        <button id="almoco" onclick="checkLunch('Tortellini Com Presunto e Mozarella')">
                         <label for="almoco">Almoço</label>
-                        <input type="checkbox" id="lanche" name="lanche" value="lanche">
+                        <button  id="lanche" onclick="checkSnack('Tortellini Com Presunto e Mozarella')">
                         <label for="lanche">Lanche</label>
-                        <input type="checkbox" id="jantar" name="jantar" value="jantar">
+                        <button id="jantar" onclick="checkDinner('Tortellini Com Presunto e Mozarella')">
                         <label for="jantar">Jantar</label> <br>
                     </form>
                     <input id="conf" type="submit" value="Confirmar">

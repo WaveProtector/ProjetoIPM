@@ -32,7 +32,13 @@ header {
 #meal th form {
     position: absolute;
     top: 10px;
-    left: 60px;
+    left: 200px;
+}
+
+#conf {
+    position: absolute;
+    top: 65px;
+    left: 150px;
 }
 
 #ingredientes {

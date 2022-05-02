@@ -1,3 +1,7 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 header {
     font-size: 30px;
 }
@@ -124,4 +128,18 @@ header {
 
 #preparacao button:hover {
     background-color: #678690;
+}
+
+#meal button {
+    padding: 10px;
+    background-color: #ccf2ff;
+    font-size: 15px;
+}
+
+#meal button:hover {
+    background-color: #678690;
+}
+
+#conf:hover {
+    background-color: grey;
 }

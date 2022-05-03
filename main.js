@@ -319,7 +319,7 @@ function changeWaterLevel() {
     var x = document.getElementById("nivel");
     count++;
     if (count == 2) {
-        x.src = "water-kinda-full.png";
+        x.src = "water-semi-full.png";
     }
     if (count == 4) {
         x.src = "water-mid.png";

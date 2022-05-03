@@ -1,11 +1,21 @@
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+
+body {
+  background-color: #93dbff;
+}
 
 #container {
-    display: grid;
-    grid-template-columns: 85% auto;
-    grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: 2fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
     grid-template-areas:
         'header header'
         'main section';
@@ -28,6 +38,10 @@ header button {
     vertical-align: middle;
     background-color:#4A68FF;
     color: white;
+}
+
+#container button:hover {
+  background-color: #212d6a;
 }
 
 header span {
@@ -117,11 +131,6 @@ section {
   padding-bottom: 56.5%;
   background: #4A68FF;
   color: white
-}
-
-.notes-title {
-    /*mesmo tentando editar aqui as "notas" não vão para a esquerda, já tentem mexer no calendar e não é nada de lá
-    também tentem mexer no header e nada, só se for da grid*/
 }
 
 .notes {

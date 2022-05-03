@@ -1,5 +1,7 @@
+//Todos os botões de encomendar
 let carts = document.querySelectorAll('.carrinho');
 
+//todos os produtos listados
 let products = [
     {
         name: 'Queijo Mozzarella',
@@ -69,12 +71,182 @@ let products = [
         tag: 'mostardaGrao',
         link: '../Produtos/Mostarda Grão/mostardaGrao.html',
         price: 2,
-        inCart: 0            //depois fazer o resto para o resto dos produtos
+        inCart: 0
+    },
+    {
+        name: 'Cogumelo Portobello',
+        tag: 'cogumeloPortobello',
+        link: '../Produtos/Cogumelo Portobello/cogumeloPortobello.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Aipo',
+        tag: 'aipo',
+        link: '../Produtos/Aipo/aipo.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Arroz Risotto',
+        tag: 'arrozRisotto',
+        link: '../Produtos/Arroz Risotto/arrozRisotto.html',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Vinho Branco',
+        tag: 'vinhoBranco',
+        link: '../Produtos/Vinho Branco/vinhoBranco.html',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Queijo Brie',
+        tag: 'queijoBrie',
+        link: '../Produtos/Queijo Brie/queijoBrie.html',
+        price: 3,
+        inCart: 0
+    },
+    {
+        name: 'Rúcula Selvagem',
+        tag: 'ruculaSelvagem',
+        link: '../Produtos/Rúcula Selvagem/ruculaSelvagem.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Água',
+        tag: 'agua',
+        link: '../Produtos/Água/agua.html',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Massa Esparguete',
+        tag: 'massaEsparguete',
+        link: '../Produtos/Massa Esparguete/massaEsparguete.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Carne de Bovilho Picada',
+        tag: 'carneBovilhoPicada',
+        link: '../Produtos/Carne de Bovilho Picada/carneBovilhoPicada.html',
+        price: 4,
+        inCart: 0
+    },
+    {
+        name: 'Tomate em Cubos',
+        tag: 'tomateCubos',
+        link: '../Produtos/Tomate em Cubos/tomateCubos.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Polpa de Tomate',
+        tag: 'polpaTomate',
+        link: '../Produtos/Polpa de Tomate/polpaTomate.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Tomilho',
+        tag: 'tomilho',
+        link: '../Produtos/Tomilho/tomilho.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Queijo Parmesão Ralado',
+        tag: 'queijoParmesao',
+        link: '../Produtos/Queijo Parmesão Ralado/queijoParmesao.html',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Tiras de Bacon',
+        tag: 'tirasBacon',
+        link: '../Produtos/Tiras de Bacon/tirasBacon.html',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Espinafre',
+        tag: 'espinafre',
+        link: '../Produtos/Espinafre/espinafre.html',
+        price: 3,
+        inCart: 0
+    },
+    {
+        name: 'Massa Lasanha',
+        tag: 'massaLasanha',
+        link: '../Produtos/Massa Lasanha/massaLasanha.html',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Molho Bechamel',
+        tag: 'bechamel',
+        link: '../Produtos/Molho Bechamel/bechamel.html',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Batata Vermelha',
+        tag: 'batata',
+        link: '../Produtos/Batata/batata.html',
+        price: 3,
+        inCart: 0
+    },
+    {
+        name: 'Cenoura',
+        tag: 'cenoura',
+        link: '../Produtos/Cenoura/cenoura.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Brócolos',
+        tag: 'brocolos',
+        link: '../Produtos/Brócolos/brocolos.html',
+        price: 2,
+        inCart: 0
+    },
+    {
+        name: 'Ervilhas',
+        tag: 'ervilhas',
+        link: '../Produtos/Ervilhas/ervilhas.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Atum',
+        tag: 'atum',
+        link: '../Produtos/Atum/atum.html',
+        price: 1,
+        inCart: 0
+    },
+    {
+        name: 'Maionese',
+        tag: 'maionese',
+        link: '../Produtos/Maionese/maionese.html',
+        price: 3,
+        inCart: 0
+    },
+    {
+        name: 'Ovos',
+        tag: 'ovos',
+        link: '../Produtos/Ovos/ovos.html',
+        price: 2,
+        inCart: 0
     }
+
 ];
 
+//verifica qual o botão carregado, ou seja, que produto foi selecionado para encomendar
 for (let i=0; i < products.length; i++) {
-    if(carts[0] != null && carts[0].name.includes(i)) {
+    if(carts[0] != null && carts[0].name == i) {
         carts[0].addEventListener('click', () => {
             cartNumbers(products[i])
             totalCost(products[i])
@@ -82,9 +254,7 @@ for (let i=0; i < products.length; i++) {
     }
 }
 
-document.getElementsByClassName("btn +").onclick = addsToCart();
-document.getElementsByClassName("btn -").onclick = subtractsToCart();
-
+//Atualiza o número de produtos dentro do carrinho ao fazer reload à página
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
 
@@ -93,6 +263,7 @@ function onLoadCartNumbers() {
     }
 }
 
+//Determina o número de produtos dentro do carrinho
 function cartNumbers(product) {
     let productNumbers = localStorage.getItem('cartNumbers');
     
@@ -108,6 +279,7 @@ function cartNumbers(product) {
     setItems(product);
 }
 
+//Coloca os produtos no carrinho
 function setItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -130,6 +302,7 @@ function setItems(product) {
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
+//Calcula o custo total de todos os produtos no carrinho
 function totalCost(product) {
     let cartCost = localStorage.getItem('totalCost');
 
@@ -143,6 +316,7 @@ function totalCost(product) {
 
 }
 
+//Faz com que os produtos que estão no carrinho apareçam na página "Minhas Encomendas"
 function displayCart() {
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
@@ -185,18 +359,12 @@ function displayCart() {
     
 }
 
+//Simula a encomenda de todos os produtos dentro do carrinho
 function buysEverything() {
     localStorage.clear();
     document.location.reload();
 }
 
-function addsToCart() {
-    
-}
-
-function subtractsToCart() {
-
-}
 var li;
 
 function searchEM() {

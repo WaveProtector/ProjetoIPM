@@ -26,7 +26,7 @@ const enchidos = ["presunto", "chourição", "alheira", "beloura", "butelo", "fa
 
 const queijos = ["queijo ricotta", "queijo requeijão", "queijo mozzarella", "queijo parmesão", "queijo camembert", "queijo brie", "queijo roquefort",
     "queijo gorgonzola", "queijo provolone", "queijo stilton", "queijo cheddar", "queijo emmental", "queijo gruyere", "queijo edam", "queijo gouda",
-     "queijo manchego", "queijo parmesão ralado"];
+    "queijo manchego", "queijo parmesão ralado"];
 
 const meditterânico = ["azeite", "ovos", "arroz", "farinha", "aveia", "alho", "pimenta", "salva"];
 
@@ -63,7 +63,7 @@ var r0 = {
         "Acrescente o tomate pelado aos cubos, a polpa de tomate e o tomilho seco.",
         "Misture bem e deixe cozinhar mais um pouco para apurar.",
         "Sirva o esparguete coberto com o molho e polvilhe com queijo parmesão ralado."],
-        'refeicao': []
+    'refeicao': []
 }
 
 var r1 = {
@@ -76,7 +76,7 @@ var r1 = {
         "Coloque um pouco de recheio no centro dos círculos de massa e feche-os, unindo as pontas. Passe com um pouco de água nos bordos e pressione para prender melhor.",
         "Lamine o manjericão e a salva, coloque-os num tacho pequeno e adicione o azeite e a mostarda em grão. Envolva bem e leve ao lume até levantar fervura. Retire e reserve.",
         "Coza a massa em água a ferver temperada com sal durante 3 minutos ou até ficar al dente. Retire, escorra e coloque os tortellini num prato fundo. Regue-os com o molho de ervas quente. Sirva de imediato."],
-        'refeicao': []
+    'refeicao': []
 }
 
 var r2 = {
@@ -89,10 +89,34 @@ var r2 = {
         "Ferva a água com o sal e adicione-a, a pouco e pouco, ao arroz, mexendo à medida que for sendo absorvida.",
         "Assim que o arroz estiver cozido, o que deve demorar cerca de 20 minutos, retire-o do lume, junte-lhe o queijo cortado em pedaços pequenos e as folhas de rúcula e envolva.",
         "Tempere com pimenta moída no momento e sirva sem demora."],
-        'refeicao': []
+    'refeicao': []
 }
 
-var recipes = [r0, r1, r2];
+var r3 = {
+    'name': "Lasanha de Espinafre",
+    'link': "../Receitas/Lasanha de Espinafre/LasanhaDeEspinafre.html",
+    'ingredients': ["espinafre", "alho", "massa para lasanha", "cebola", "bechamel", "sal", "queijo brie", "água", "pimenta de moinho"],
+    'passos': [],
+    'refeicao': []
+}
+
+var r4 = {
+    'name': "Salada Russa",
+    'link': "../Receitas/SaladaRussa/SaladaRussa.html",
+    'ingredients': ["batata cozida", "cenoura", "brocolos", "maionese", "ervilhas", "atum", "maionese", "ovos", "sal", "azeite"],
+    'passos': [],
+    'refeicao': []
+}
+
+var r5 = {
+    'name': "Spaghetti Carbonara",
+    'link': "../Receitas/SpaghettiCarbonara/SpaghettiCarbonara.html",
+    'ingredients': ["cogumelo portobello", "alho", "bacon picado", "cebola", "massa esparguete", "sal", "queijo brie", "água", "pimenta de moinho"],
+    'passos': [],
+    'refeicao': []
+}
+
+var recipes = [r0, r1, r2, r3, r4, r5];
 //funções auxiliares
 
 function addZero(i) {
@@ -102,66 +126,73 @@ function addZero(i) {
 
 //Receitas
 
-var ingredients = ["chalota", "alho", "azeite", "queijo mozzarella", "presunto", "tomate seco", "sal", "pimenta", "salva", "pés de manjericão", "mostarda em grão"];
 
 function showPasso(p, recipeName) {
     var x = document.getElementById("preparacao-passo");
     for (var i = 0; i < recipes.length; i++) {
         if (recipes[i].name == recipeName)
             x.innerHTML = "Passo " + p + ": " + recipes[i].passos[p - 1];
+        break;
     }
 }
 
 
 function checkBreakfast(recipeName) {
-    if(confirm("Deseja comer esta refeição ao pequeno-almoço?")) {
-        for(var i = 0; i < recipes.length; i++) {
-            if(recipes[i].name === recipeName) {
+    if (confirm("Deseja comer esta refeição ao pequeno-almoço?")) {
+        for (var i = 0; i < recipes.length; i++) {
+            if (recipes[i].name === recipeName) {
                 recipes[i].refeicao.push("Pequeno-almoço");
                 document.getElementById("pequeno-almoco").disabled = true;
                 console.log(recipes[i].refeicao);
+                break;
             }
         }
     }
 }
 
 function checkLunch(recipeName) {
-    if(confirm("Deseja comer esta refeição ao almoço?")) {
-        for(var i = 0; i < recipes.length; i++) {
-            if(recipes[i].name === recipeName) {
+    if (confirm("Deseja comer esta refeição ao almoço?")) {
+        for (var i = 0; i < recipes.length; i++) {
+            if (recipes[i].name === recipeName) {
                 recipes[i].refeicao.push("Almoço");
                 document.getElementById("almoco").disabled = true;
+                break;
             }
         }
     }
 }
 
 function checkSnack(recipeName) {
-    if(confirm("Deseja comer esta refeição ao lanche?")){
-        for(var i = 0; i < recipes.length; i++) {
-            if(recipes[i].name === recipeName) {
+    if (confirm("Deseja comer esta refeição ao lanche?")) {
+        for (var i = 0; i < recipes.length; i++) {
+            if (recipes[i].name === recipeName) {
                 recipes[i].refeicao.push("Lanche");
                 document.getElementById("lanche").disabled = true;
+                break;
             }
         }
     }
 }
 
 function checkDinner(recipeName) {
-    if(confirm("Deseja comer esta refeição ao jantar?")){
-        for(var i = 0; i < recipes.length; i++) {
-            if(recipes[i].name === recipeName) {
+    if (confirm("Deseja comer esta refeição ao jantar?")) {
+        for (var i = 0; i < recipes.length; i++) {
+            if (recipes[i].name === recipeName) {
                 recipes[i].refeicao.push("Jantar");
                 document.getElementById("jantar").disabled = true;
+                break;
             }
         }
     }
 }
 
 function setRefeicao(recipeName) {
-    for(var i = 0; i < recipes.length; i++) {
-        if(recipeName == recipes[i].name) {
-
+    for (var i = 0; i < recipes.length; i++) {
+        if (recipeName == recipes[i].name) {
+                localStorage.setItem(recipeName, recipes[i].refeicao);
+                document.getElementById("conf").disabled = true;
+            
+            break;
         }
     }
 }
@@ -248,7 +279,7 @@ function showMeditteraneanDietDishes() {
     }
 }
 
-function showMWthoutLactoseDishes() {
+function showWthoutLactoseDishes() {
     showAllRecipes();
     var check;
     var allLact = lacticinios.concat(queijos);
@@ -359,12 +390,12 @@ function ingredientsMissingPF() {
 
 function registerMealPF() {
     var table = document.getElementById("notifications");
-    var refeicao = recipes[0].refeicao;
+    var refeicao = localStorage.getItem(recipes[0].name);
     var warning = "<i class='fa-solid fa-calendar'></i> Refeição planeada para: ";
     //for (var j = 0; j < result.length; j++) {
-        var row = table.insertRow(1);
-        var cell = row.insertCell(0);
-        cell.innerHTML = warning.concat(refeicao);
+    var row = table.insertRow(1);
+    var cell = row.insertCell(0);
+    cell.innerHTML = warning.concat(refeicao);
     //}
 }
 
@@ -462,11 +493,11 @@ function putInNotes() {
 
 function printNotes() {
     var notes = localStorage.getItem("agendaNotes");
-    
-    for(var i = 0; i < notes.length; i++) {
+
+    for (var i = 0; i < notes.length; i++) {
         var node = document.createElement("li");
-    var textNode = document.createTextNode(text);
-    node.appendChild(textNode);
-    document.getElementById("notes").appendChild(node);
+        var textNode = document.createTextNode(text);
+        node.appendChild(textNode);
+        document.getElementById("notes").appendChild(node);
     }
 }

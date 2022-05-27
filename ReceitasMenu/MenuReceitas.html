@@ -7,13 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 <title>Receitas</title>
 </head>
-<body onload="showAllRecipes()">
+<body onload="insertRecipesInUl();showAllRecipes()">
 <div id="container">
     <header>
         <h1>Receitas</h1>
         <button id="lastpage" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
         <button id="house" onclick="document.location='../PrototipoFuncional/PrototipoFuncional.html'"><i class="fa-solid fa-house"></i></button>
-        <div id="search-bar">
+        <div id="search-bar" onkeyup="search()">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input id="search" type="text" placeholder="Pesquisar receitas"/>
         </div>
@@ -33,13 +33,7 @@
 
     <section>
         <h2>Escolhidas anteriormente</h2>   
-        <ul>
-            <li><a href="../Receitas/TortelliniComPresuntoEMozarella/TortelliniComPresuntoEMozarella.html">Tornellini Com Presunto E Mozzarella</a></li>
-            <li><a href="../Receitas/RisottoDeCogumelos/RisottoDeCogumelos.html">Risotto de Cogumelos</a></li>
-            <li><a href="../Receitas/EspargueteABolonhesa/EspargueteABolonhesa.html">Esparguete a Bolonhesa</a></li>
-            <li><a href="../Receitas/SpaghettiCarbonara/SpaghettiCarbonara.html">Spaghetti Carbonara</a></li>
-            <li><a href="../Receitas/Lasanha de Espinafre/LasanhaDeEspinafre.html">Lasanha de Espinafre</a></li>
-            <li><a href="../Receitas/SaladaRussa/SaladaRussa.html">Salada Russa</a></li>
+        <ul id="recipes">
         </ul>
     </section>
 

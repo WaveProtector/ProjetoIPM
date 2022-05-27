@@ -130,8 +130,12 @@ function addZero(i) {
 function showPasso(p, recipeName) {
     var x = document.getElementById("preparacao-passo");
     for (var i = 0; i < recipes.length; i++) {
-        if (recipes[i].name == recipeName)
+        if (recipes[i].name == recipeName) {
             x.innerHTML = "Passo " + p + ": " + recipes[i].passos[p - 1];
+            document.getElementById("preparacao-passo").style.background = 'aquamarine';
+            document.getElementById("preparacao-passo").style.border = 'solid';
+        }
+
         break;
     }
 }
@@ -196,6 +200,7 @@ function setRefeicao(recipeName) {
         }
     }
 }
+
 
 
 //Receitas Menu
